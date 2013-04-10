@@ -2,13 +2,18 @@
 TMP_DIR=~/tmp
 [ -d $TMP_DIR ] || mkdir $TMP_DIR
 cd $TMP_DIR
+echo "Downloading iTerm2"
 curl -O https://iterm2.googlecode.com/files/iTerm2-1_0_0_20130324-LeopardPPC.zip
 open .
-echo "Unzip the downloaded zip file and drag it to the Application folder or the dock, Press Enter to continue once done"
+echo "Unzip the downloaded zip file and drag it to the Application folder or the dock, make sure don't run it yet. Press Enter to continue once done"
 read -n 1
 
-echo "Installing Menlo Powerline font"
-curl https://gist.github.com/qrush/1595572/raw/417a3fa36e35ca91d6d23ac961071094c26e5fad/Menlo-Powerline.otf -o ~/Library/Fonts/Menlo-Powerline.otf
+cd $TMP_DIR
+echo "Downloading Menlo Powerline font"
+curl -O https://gist.github.com/qrush/1595572/raw/417a3fa36e35ca91d6d23ac961071094c26e5fad/Menlo-Powerline.otf
+echo "Install the downloaded font, Press Enter to continue once done"
+read -n 1
+open .
 
 echo "Installing oh-my-zsh"
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
