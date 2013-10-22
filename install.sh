@@ -2,15 +2,15 @@
 TMP_DIR=~/tmp
 [ -d $TMP_DIR ] || mkdir $TMP_DIR
 cd $TMP_DIR
-echo "Downloading iTerm2"
-curl -O https://iterm2.googlecode.com/files/iTerm2-1_0_0_20130324-LeopardPPC.zip
+echo "Downloading iTerm2 (v1.0 stable)"
+curl -O http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip 
 open .
 echo "Unzip the downloaded zip file and drag it to the Application folder or the dock, make sure don't run it yet. Press Enter to continue once done"
 read -n 1
 
 cd $TMP_DIR
-echo "Downloading Menlo Powerline font"
-curl -O https://gist.github.com/qrush/1595572/raw/417a3fa36e35ca91d6d23ac961071094c26e5fad/Menlo-Powerline.otf
+echo "Downloading PowerlineSymbols Font"
+curl -O https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf 
 echo "Install the downloaded font, Press Enter to continue once done"
 read -n 1
 open .
@@ -22,5 +22,6 @@ sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ~/.zshrc
 
 echo "Now open up iTerm2 and do the followings:"
 echo "1) Preferences -> Default -> Text -> Regular Font"
-echo "   Pick 'Menlo Regular for Powerline' from the list, keep font size at 12pt"
-echo "2) Preferences -> Default -> Colors -> Load Presets -> Tango Dark"
+echo "   Pick 'PowerlineSymbols' from the list, keep font size at 12pt, if you have high-def display, choose a larger size such as 14pt"
+echo "2) Repeat previous step for Non-ASCII Font"
+echo "3) Preferences -> Default -> Colors -> Load Presets -> Tango Dark"
