@@ -5,7 +5,7 @@ cd $TMP_DIR
 echo "Downloading iTerm2 (v1.0 stable)"
 curl -O http://www.iterm2.com/downloads/stable/iTerm2_v1_0_0.zip 
 open .
-echo "Unzip the downloaded zip file and drag it to the Application folder or the dock, make sure don't run it yet. Press Enter to continue once done"
+echo "Unzip the downloaded zip file and drag file iTerm to the Application folder or the dock, make sure don't run it yet. Press Enter to continue once done"
 read -n 1
 
 cd $TMP_DIR
